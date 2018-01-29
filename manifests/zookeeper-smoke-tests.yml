@@ -1,0 +1,7 @@
+schedule: "@every 1m"
+run_once: true
+errand:
+  name: smoke-tests
+include:
+  deployments:
+  - zookeeper

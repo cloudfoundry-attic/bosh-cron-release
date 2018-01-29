@@ -1,0 +1,6 @@
+- type: replace
+  path: /releases/name=bosh-cron?
+  value:
+    name: bosh-cron
+    version: create
+    url: file://.

@@ -1,0 +1,5 @@
+check process bosh-cron
+  with pidfile /var/vcap/sys/run/bpm/bosh-cron/bosh-cron.pid
+  start program "/var/vcap/jobs/bpm/bin/bpm start bosh-cron"
+  stop program "/var/vcap/jobs/bpm/bin/bpm stop bosh-cron"
+  group vcap

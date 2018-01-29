@@ -1,0 +1,6 @@
+schedule: "@every 1m"
+errand:
+  name: status
+include:
+  deployments:
+  - zookeeper

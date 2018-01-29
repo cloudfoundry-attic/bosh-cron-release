@@ -1,0 +1,30 @@
+---
+name: bosh-cron
+
+templates:
+  bpm.yml:         config/bpm.yml
+  config.json.erb: config/config.json
+  bosh-cron:       bin/bosh-cron
+
+packages:
+- bosh-cron
+
+properties:
+  director.host:
+    description: "Director host"
+    example: "192.168.50.4"
+  director.port:
+    description: "Director port"
+    default: 25555
+
+  director.tls.enabled:
+    description: "TLS configuration (https://bosh.io/docs/props-common.html#tls)"
+    default: true
+  director.tls.cert:
+    description: "Certificate variable type (https://bosh.io/docs/variable-types.html#certificate)"
+    default: {}
+
+  director.client:
+    description: "Director client (username in case of basic auth)"
+  director.client_secret:
+    description: "Director client secret (password in case of basic auth)"

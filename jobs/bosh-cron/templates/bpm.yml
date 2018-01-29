@@ -1,0 +1,7 @@
+processes:
+- name: bosh-cron
+  executable: /var/vcap/packages/bosh-cron/bin/bosh-cron
+  args: [/var/vcap/jobs/bosh-cron/config/config.json]
+  ephemeral_disk: true
+  limits:
+    open_files: 1024

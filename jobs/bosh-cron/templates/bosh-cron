@@ -1,0 +1,4 @@
+#!/bin/bash
+
+exec /var/vcap/packages/bosh-cron/bin/bosh-cron \
+  /var/vcap/jobs/bosh-cron/config/config.json

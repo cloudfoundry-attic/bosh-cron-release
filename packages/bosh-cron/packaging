@@ -1,0 +1,8 @@
+set -eu
+
+mkdir -p "${BOSH_INSTALL_TARGET}/bin"
+source /var/vcap/packages/golang-1.8-linux/bosh/compile.env
+
+mkdir ../src && cp -a * ../src/ && mv ../src ./src
+
+go build -o "${BOSH_INSTALL_TARGET}/bin/bosh-cron" github.com/bosh-tools/bosh-cron/

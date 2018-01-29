@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e -x
+
+export GOOS=linux
+export GOARCH=amd64
+
+go fmt github.com/bosh-tools/bosh-cron/...
+go build -o bin/bosh-cron github.com/bosh-tools/bosh-cron
